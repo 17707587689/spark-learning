@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+.pytest_cache/
+.DS_Store
+*.log
+.env
+.env.*
+*.tmp
+*.swp
+
+# 大体量数据不进入 Git
+data/generated/
+data/raw/
+data/output/
+*.parquet
+*.orc
