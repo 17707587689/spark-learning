@@ -1,0 +1,128 @@
+    ```text
+              HDFS
+               │
+        ┌──────┼──────┐
+        ▼      ▼      ▼
+     Block0  Block1  Block2
+        │      │      │
+        └──────┼──────┘
+               │
+               ▼
+        Spark Input Partition
+               │
+       ┌───────┼────────┐
+       ▼       ▼        ▼
+     Part0    Part1    Part2
+       │       │        │
+       ▼       ▼        ▼
+     Task0    Task1    Task2
+       │       │        │
+       ▼       ▼        ▼
+    Executor Executor Executor
+
+    Hadoop提供了以HDFS为代表的分布式存储和资源管理能力，Spark是独立的分布式计算引擎，可以运行在Hadoop生态中，并读取HDFS 数据。
+
+    HDFS Block 是 HDFS 划分和存储大文件的基本单位。
+
+    300 MB 文件
+    128 MB Block Size
+            ↓
+    Block 0   128 MB
+    Block 1   128 MB
+    Block 2    44 MB
+
+    Partition 是 Spark 对数据进行并行计算时的基本数据划分。
+
+    Stage 0
+    │
+    ├── Partition 0 → Task 0
+    ├── Partition 1 → Task 1
+    ├── Partition 2 → Task 2
+    └── Partition 3 → Task 3
+    一个 Stage 中，一个 Partition 通常对应一个 Task。
+```
+```text
+                        Spark Application
+                           │
+                           ▼
+                        Driver
+                           │
+                 创建 / 管理执行计划
+                           │
+                           ▼
+                         Stage
+                           │
+                ┌──────────┼──────────┐
+                ▼          ▼          ▼
+             Task 0      Task 1     Task 2
+                │          │          │
+                ▼          ▼          ▼
+           Partition 0 Partition 1 Partition 2
+                │          │          │
+                └──────────┼──────────┘
+                           │
+                           ▼
+                          HDFS
+                           │
+                    ┌──────┼──────┐
+                    ▼      ▼      ▼
+                  Block0 Block1 Block2
+```
+```text
+customer_df = spark.read.parquet(
+"hdfs:///user/hive/warehouse/dim/customer_shuffle"
+) 
+
+实际后台进行了如下操作
+① Spark 要读取 HDFS 数据
+            ↓
+② HDFS 找到文件
+            ↓
+③ 文件由若干 HDFS Block / 文件片段组成
+            ↓
+④ Spark 根据输入数据划分 Partition
+            ↓
+⑤ Stage 执行时
+            ↓
+⑥ 一个 Partition 通常对应一个 Task
+            ↓
+⑦ Task 被 Executor 执行
+```
+```text
+真正决定 Executor 能同时运行多少 Task 的关键是：
+Executor 的 CPU Core 数量
+
+并发 Task 数 ≈ 所有 Executor 的 Core 总数
+```
+```text
+                 HDFS
+                  │
+            文件 / Block
+                  │
+                  ▼
+             Spark读取
+                  │
+                  ▼
+             Partition
+                  │
+                  ▼
+                Task
+                  │
+                  ▼
+              Executor
+                  │
+              ┌───┴───┐
+              ▼       ▼
+            Core     Core
+              │       │
+              ▼       ▼
+            Task     Task
+
+Driver
+  │
+  ├── 分析代码
+  ├── 创建 Job
+  ├── 划分 Stage
+  ├── 创建 Task
+  └── 调度 Task 给 Executor
+```

@@ -1,0 +1,6 @@
+start-dfs.sh
+source /opt/miniconda3/etc/profile.d/conda.sh
+conda activate spark-env
+pyspark
+
+customer_df = spark.read.parquet("/user/hive/warehouse/dim/customer_shuffle")

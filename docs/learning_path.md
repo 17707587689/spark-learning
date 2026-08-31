@@ -1,38 +1,38 @@
 # Spark 学习路径
 
-> 每完成一个知识点，将 `[ ]` 修改为 `[x]`。该文件是项目唯一的正式学习进度总表。
+> 每完成一个知识点，将 `[ ]` 修改为 `[√]`。该文件是项目唯一的正式学习进度总表。
 
 ## Day01：Spark 架构与环境
 
-- [ ] 01-01 Spark 是什么
-- [ ] 01-02 Spark 核心组件
-- [ ] 01-03 Driver
-- [ ] 01-04 Executor
-- [ ] 01-05 Application
-- [ ] 01-06 Job / Stage / Task
-- [ ] 01-07 Spark 与 Hadoop / HDFS
-- [ ] 01-08 第一个 Spark 程序
-- [ ] 01-09 Day01 总结
+- [√] 01-01 Spark 是什么
+- [√] 01-02 Spark 核心组件
+- [√] 01-03 Driver
+- [√] 01-04 Executor
+- [√] 01-05 Application
+- [√] 01-06 Job / Stage / Task
+- [√] 01-07 Spark 与 Hadoop / HDFS
+- [√] 01-08 第一个 Spark 程序
+- [√] 01-09 Day01 总结
 
 ## Day02：DataFrame 入门
 
-- [ ] 02-01 SparkSession
-- [ ] 02-02 创建 DataFrame
-- [ ] 02-03 Schema
-- [ ] 02-04 show
-- [ ] 02-05 printSchema
-- [ ] 02-06 select
-- [ ] 02-07 filter
-- [ ] 02-08 withColumn
-- [ ] 02-09 when / otherwise
-- [ ] 02-10 Day02 综合实验
+- [√] 02-01 SparkSession
+- [√] 02-02 创建 DataFrame
+- [√] 02-03 Schema
+- [√] 02-04 show
+- [√] 02-05 printSchema
+- [√] 02-06 select
+- [√] 02-07 filter
+- [√] 02-08 withColumn
+- [√] 02-09 when / otherwise
+- [√] 02-10 Day02 综合实验
 
 ## Day03：DataFrame CRUD
 
-- [ ] 03-01 select / alias
-- [ ] 03-02 drop
-- [ ] 03-03 withColumn
-- [ ] 03-04 filter / where
+- [√] 03-01 select / alias
+- [√] 03-02 drop
+- [√] 03-03 withColumn
+- [√] 03-04 filter / where
 - [ ] 03-05 distinct
 - [ ] 03-06 orderBy
 - [ ] 03-07 limit
@@ -108,16 +108,16 @@
 
 ## Day09：分区与 Shuffle
 
-- [x] 09-01 分区 Partition
-- [x] 09-02 repartition
-- [x] 09-03 coalesce
-- [x] 09-04 Shuffle
-- [x] 09-05 GroupBy 与 Shuffle
-- [x] 09-06 spark.sql.shuffle.partitions
-- [ ] 09-07 AQE
-- [ ] 09-08 AQE 执行计划
-- [ ] 09-09 关闭 AQE 对照实验
-- [ ] 09-10 Day09 总结
+- [√] 09-01 分区 Partition
+- [√] 09-02 repartition
+- [√] 09-03 coalesce
+- [√] 09-04 Shuffle
+- [√] 09-05 GroupBy 与 Shuffle
+- [√] 09-06 spark.sql.shuffle.partitions
+- [√] 09-07 AQE
+- [√] 09-08 AQE 执行计划
+- [√] 09-09 关闭 AQE 对照实验
+- [√] 09-10 Day09 总结
 
 ## Day10：Cache 与 Broadcast
 
