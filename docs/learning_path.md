@@ -33,10 +33,10 @@
 - [√] 03-02 drop
 - [√] 03-03 withColumn
 - [√] 03-04 filter / where
-- [ ] 03-05 distinct
-- [ ] 03-06 orderBy
-- [ ] 03-07 limit
-- [ ] 03-08 写入 Parquet
+- [√] 03-05 distinct
+- [√] 03-06 orderBy
+- [√] 03-07 limit
+- [√] 03-08 写入 Parquet
 - [ ] 03-09 读取 Parquet
 - [ ] 03-10 Day03 综合实验
 
