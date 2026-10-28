@@ -37,46 +37,47 @@
 - [√] 03-06 orderBy
 - [√] 03-07 limit
 - [√] 03-08 写入 Parquet
-- [ ] 03-09 读取 Parquet
-- [ ] 03-10 Day03 综合实验
+- [√] 03-09 读取 Parquet
+- [√] 03-10 Day03 综合实验
 
 ## Day04：聚合与 Join
 
-- [ ] 04-01 groupBy
-- [ ] 04-02 agg
-- [ ] 04-03 count / sum / avg
-- [ ] 04-04 多字段聚合
-- [ ] 04-05 inner join
-- [ ] 04-06 left join
-- [ ] 04-07 right / full join
-- [ ] 04-08 多表 Join
-- [ ] 04-09 Join 执行计划
-- [ ] 04-10 Join 综合实验
+- [√] 04-01 groupBy
+- [√] 04-02 agg
+- [√] 04-03 count / sum / avg
+- [√] 04-04 多字段聚合
+- [√] 04-05 inner join
+- [√] 04-06 left join
+- [√] 04-07 right / full join
+- [√] 04-08 多表 Join
+- [√] 04-09 Join 执行计划
+- [√] 04-10 Join 综合实验
 
 ## Day05：Spark SQL
 
-- [ ] 05-01 createOrReplaceTempView
-- [ ] 05-02 SELECT
-- [ ] 05-03 WHERE
-- [ ] 05-04 GROUP BY
-- [ ] 05-05 HAVING
-- [ ] 05-06 JOIN
-- [ ] 05-07 ORDER BY
-- [ ] 05-08 SQL 与 DataFrame 对应关系
-- [ ] 05-09 综合实验
+- [√] 05-01 createOrReplaceTempView
+- [√] 05-02 SELECT
+- [√] 05-03 WHERE
+- [√] 05-04 GROUP BY
+- [√] 05-05 HAVING
+- [√] 05-06 JOIN
+- [√] 05-07 ORDER BY
+- [√] 05-08 SQL 与 DataFrame 对应关系
+- [√] 05-09 综合实验
 
 ## Day06：窗口函数
 
-- [ ] 06-01 Window 基础
-- [ ] 06-02 partitionBy
-- [ ] 06-03 orderBy
-- [ ] 06-04 row_number
-- [ ] 06-05 rank
-- [ ] 06-06 dense_rank
-- [ ] 06-07 lag
-- [ ] 06-08 lead
-- [ ] 06-09 窗口聚合
-- [ ] 06-10 综合案例
+- [√] 06-01 Window 基础
+- [√] 06-02 partitionBy
+- [√] 06-03 orderBy
+- [√] 06-04 row_number
+- [√] 06-05 rank
+- [√] 06-06 dense_rank
+- [√] 06-07 lag
+- [√] 06-08 lead
+- [√] 06-09 窗口聚合
+- [√] 06-10 综合案例
+- [√] 06-11 窗口函数与SparkSQL
 
 ## Day07：综合练习
 
@@ -91,20 +92,21 @@
 
 ## Day08：Parquet、ORC、Hive
 
-- [ ] 08-01 Parquet 是什么
-- [ ] 08-02 Parquet Schema
-- [ ] 08-03 Parquet 列式存储
-- [ ] 08-04 Parquet 压缩
-- [ ] 08-05 Spark 写 Parquet
-- [ ] 08-06 Spark 读 Parquet
-- [ ] 08-07 ORC
-- [ ] 08-08 Parquet 与 ORC 对比
-- [ ] 08-09 Hive Metastore
-- [ ] 08-10 Hive Database
-- [ ] 08-11 Hive Table
-- [ ] 08-12 Hive External Table
-- [ ] 08-13 Hive + HDFS + Spark
-- [ ] 08-14 Day08 综合实验
+- [√] 08-01 Parquet 是什么
+- [√] 08-02 Parquet Schema
+- [√] 08-03 Parquet 列式存储
+- [√] 08-04 Parquet 压缩
+- [√] 08-05 Parquet 相关基础实践
+- [√] 08-06 Spark 读 Parquet
+- [√] 08-07 Spark 写 Parquet
+- [√] 08-08 ORC
+- [√] 08-09 Parquet 与 ORC 对比
+- [√] 08-10 Hive Metastore
+- [√] 08-11 Hive Database
+- [√] 08-12 Hive Table
+- [√] 08-13 Hive External Table
+- [√] 08-14 Hive + HDFS + Spark
+- [√] 08-15 Day08 综合实验
 
 ## Day09：分区与 Shuffle
 
@@ -121,12 +123,12 @@
 
 ## Day10：Cache 与 Broadcast
 
-- [ ] 10-01 Cache
-- [ ] 10-02 persist
-- [ ] 10-03 StorageLevel
-- [ ] 10-04 cache 执行机制
-- [ ] 10-05 cache 使用场景
-- [ ] 10-06 unpersist
+- [√] 10-01 Cache
+- [√] 10-02 persist
+- [√] 10-03 StorageLevel
+- [√] 10-04 cache 执行机制
+- [√] 10-05 cache 使用场景
+- [√] 10-06 unpersist
 - [ ] 10-07 Broadcast
 - [ ] 10-08 Broadcast Join
 - [ ] 10-09 Shuffle Join

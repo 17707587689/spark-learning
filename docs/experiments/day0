@@ -2,5 +2,32 @@ start-dfs.sh
 source /opt/miniconda3/etc/profile.d/conda.sh
 conda activate spark-env
 pyspark
+nohup hive --service metastore > ~/hive-metastore.log 2>&1 &
 
 customer_df = spark.read.parquet("/user/hive/warehouse/dim/customer_shuffle")
+
+# 激活虚拟环境
+cd D:\Project\Python\spark-learning
+
+.venv\Scripts\activate
+# 显式告诉 Spark 使用当前 .venv 的 Python
+$env:PYSPARK_PYTHON="$PWD\.venv\Scripts\python.exe"
+$env:PYSPARK_DRIVER_PYTHON="$PWD\.venv\Scripts\python.exe"
+
+$env:HADOOP_HOME="D:\Project\Python\spark-learning\hadoop"
+$env:SPARK_CONF_DIR="D:\Project\Python\spark-learning\conf"
+$env:PYSPARK_PYTHON="D:\Project\Python\spark-learning\.venv\Scripts\python.exe"
+$env:PYSPARK_DRIVER_PYTHON="D:\Project\Python\spark-learning\.venv\Scripts\python.exe"
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\commands\start_spark_env.ps1
+
+python -m src.jobs.customer_etl
+
+python -m src.jobs.customer_etl
+
+uv run python -m src.jobs.day03_10_customer_job
+
+.\.venv\Scripts\python.exe -m src.jobs.day04_05_job
+
+$env:HADOOP_CONF_DIR="D:\Project\Python\spark-learning\hadoop\etc\hadoop"
