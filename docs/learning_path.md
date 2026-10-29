@@ -129,9 +129,9 @@
 - [√] 10-04 cache 执行机制
 - [√] 10-05 cache 使用场景
 - [√] 10-06 unpersist
-- [ ] 10-07 Broadcast
-- [ ] 10-08 Broadcast Join
-- [ ] 10-09 Shuffle Join
+- [√] 10-07 Broadcast
+- [√] 10-08 Broadcast Join
+- [√] 10-09 Shuffle Join
 - [ ] 10-10 Broadcast 与 Shuffle 对比
 - [ ] 10-11 综合实验
 
